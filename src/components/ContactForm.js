@@ -52,6 +52,16 @@ const ContactForm = () => {
           <label htmlFor="message">Message</label>
           <textarea name="message" id="message" ref={register({ required: false })} />
         </div>
+        <div>
+        <label htmlFor="terms">Terms and Conditions*</label>
+          <div className="checkbox-container">
+            <label>I accept to the terms and conditions</label>
+            <input type="checkbox" name="terms" id="terms" ref={register({ required: true })}/>
+          </div>
+          {errors.terms && (
+            <p>Looks like there was an error: {errors.terms.type}</p>
+          )}
+        </div>
         {data && (
           <pre style={{ textAlign: "left", color: "white" }}>
             {JSON.stringify(data, null, 2)}

@@ -131,3 +131,13 @@ button {
   padding: 10px 20px;
   border-radius: 4px;
 }
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.checkbox-container label {
+  width: 100%;
+}
